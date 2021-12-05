@@ -29,6 +29,8 @@ class Actor:
         self._width = 0
         self._height = 0
         self._image = ""
+        self._color = ""
+        self._level = 0
 
     def get_width(self):
         return self._width
@@ -83,7 +85,7 @@ class Actor:
         return self._text
 
     def set_text(self, text):
-        self._text = text;
+        self._text = text
 
     def get_velocity(self):
         """Gets the actor's speed and direction.
@@ -95,6 +97,9 @@ class Actor:
             Point: The actor's speed and direction.
         """
         return self._velocity
+
+    def get_level(self):
+        return self._level
     
     def set_position(self, position):
         """Updates the actor's position to the given one.
@@ -122,6 +127,9 @@ class Actor:
             position (Point): The given velocity.
         """
         self._velocity = velocity
+
+    def set_level(self, level):
+        self._level = level
 
     def has_text(self):
         return self._text != ""

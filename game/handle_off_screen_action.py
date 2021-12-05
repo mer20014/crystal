@@ -19,4 +19,16 @@ class HandleOffScreenAction(Action):
         Args:
             cast (dict): The game actors {key: tag, value: list}.
         """
-        pass
+        player = cast["player"][0]
+        x = player.get_position().get_x()
+        y = player.get_position().get_y()
+        dx = player.get_velocity().get_x()
+        dy = player.get_velocity().get_y()
+
+        if y <= 0 : 
+            # #If on left side of platform
+            dy *= 5
+            player.set_velocity(Point(dx, dy))
+            player.set_position(Point(x, y +4))
+            # print('left')
+            

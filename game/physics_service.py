@@ -27,3 +27,4 @@ class PhysicsService:
         rectangle2 = raylibpy.Rectangle(x2, y2, width2, height2)
 
         return raylibpy.check_collision_recs(rectangle1, rectangle2)
+

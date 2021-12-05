@@ -1,3 +1,4 @@
+import raylibpy
 from game.action import Action
 from game import constants
 from game.point import Point
@@ -22,6 +23,22 @@ class ControlActorsAction(Action):
         Args:
             cast (dict): The game actors {key: tag, value: list}.
         """
+        jump_timer = 0
         direction = self._input_service.get_direction()
         player = cast["player"][0]
+
+        # x = player.get_velocity().get_x()
+        # y = player.get_velocity().get_y()
+        # jump = False
+
+        # if self._input_service.is_up_pressed():
+        #     jump = True
+        #     jump_timer += 1
+        #     dy = y + -3
+        #     player.set_velocity(Point(x, dy))
+        #     print(jump_timer)
+        #     if jump_timer > 80 and jump is True:
+        #         player.set_velocity(Point(x,y))
+        #         jump = False
+
         player.set_velocity(direction.scale(constants.PLAYER_SPEED))

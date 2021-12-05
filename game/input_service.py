@@ -30,6 +30,8 @@ class InputService:
         """
         dx = 0
         dy = 0
+        jump_timer = 0
+        jump = False
 
         if self.is_left_pressed():
             dx = -1
@@ -38,10 +40,20 @@ class InputService:
             dx = 1
         
         if self.is_up_pressed():
-            dy = -1
+            pass
+            # dy = 1
+            # jump = True
+            # while jump is True:
+            #     dy = 1
+            #     jump_timer += 1
+            #     print(jump_timer)
+
+            #     if jump_timer > 30:
+            #         jump = False
+            #         print("Over)")
         
-        if self.is_down_pressed():
-            dy = 1
+        # if self.is_down_pressed():
+        #     dy = -1
 
         direction = Point(dx, dy)
         return direction
@@ -55,8 +67,8 @@ class InputService:
     def is_up_pressed(self):
         return raylibpy.is_key_down(raylibpy.KEY_UP)
 
-    def is_down_pressed(self):
-        return raylibpy.is_key_down(raylibpy.KEY_DOWN)
+    # def is_down_pressed(self):
+    #     return raylibpy.is_key_down(raylibpy.KEY_DOWN)
 
     def window_should_close(self):
         return raylibpy.window_should_close()
