@@ -3,6 +3,12 @@ from game import constants
 from game.point import Point
 
 class Enemy(Actor):
+    """The enemies. Monsters moving back and forth along platforms. 
+    If colliding with player, player is put at the beginning of the level
+    
+    Args:
+        self (Actor): an instance of Actor.
+    """
     def __init__(self):
         super().__init__()
         self._width = 10

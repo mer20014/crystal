@@ -3,6 +3,10 @@ from game import constants
 from game.point import Point
 
 class Platform(Actor):
+    """The platforms of the game. What the player collides with
+    Args:
+        self (Actor): an instance of Actor.
+    """
     def __init__(self):
         super().__init__()
         self._width = constants.PLATFORM_WIDTH

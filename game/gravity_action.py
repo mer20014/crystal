@@ -1,11 +1,10 @@
 import raylibpy
 from game.action import Action
-from game import constants, input_service
+from game import constants
 from game.point import Point
 
 class GravityAction(Action):
-    """A code template for moving actors. The responsibility of this class of
-    objects is move any actor that has a velocity more than zero.
+    """Code for applying gravity to the player and jumping
     
     Stereotype:
         Controller
@@ -51,6 +50,11 @@ class GravityAction(Action):
 
 
     def jump(self, cast):
+        """
+        Moves the selected cast member up when jump is pressed
+
+        Arg (cast): The cast used
+        """
         player = cast["player"][0]
 
         jump = False
@@ -66,7 +70,7 @@ class GravityAction(Action):
 
         while is_key_down:         
             jump = True
-            jump_height = 10
+            jump_height = 15
             if jump is True and jump_timer > 0:
                 dy = dy + jump_height
                 y = (y - dy) % constants.MAX_Y

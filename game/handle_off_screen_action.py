@@ -25,10 +25,18 @@ class HandleOffScreenAction(Action):
         dx = player.get_velocity().get_x()
         dy = player.get_velocity().get_y()
 
-        if y <= 0 : 
-            # #If on left side of platform
-            dy *= 5
-            player.set_velocity(Point(dx, dy))
-            player.set_position(Point(x, y +4))
-            # print('left')
+        if x >= constants.MAX_X - 20:
+            #collide on right side of screen
+            x = x + (x - (dx))
+            player.set_position(Point(x, y))
+
+        elif x <= 1:
+            #Collide on left side of screen
+            x = x - (x + (dx))
+            player.set_position(Point(x, y))
+            print("hit")
+
+        elif y >= constants.MAX_Y - 20:
+            #collides w/ bottom of screen
+            player.set_position(player._start_position)
             

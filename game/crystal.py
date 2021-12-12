@@ -4,6 +4,11 @@ from game.point import Point
 
 class Crystal(Actor):
     def __init__(self):
+        """The crystals. They change the color status of the player on collision
+        
+        Args:
+            self (Actor): an instance of Actor.
+        """
         super().__init__()
         self._width = constants.CRYSTAL_WIDTH
         self._height = constants.CRYSTAL_HEIGHT

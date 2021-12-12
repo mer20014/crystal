@@ -24,7 +24,7 @@ class AudioService:
         Plays the sound file provided. Make sure to call start_audio before this is called.
         """
         if filename not in self._sounds.keys():
-            loaded = raylibpy.load_sound(filename)
+            loaded = raylibpy.load_sound(filename)  
             self._sounds[filename] = loaded
 
         sound = self._sounds[filename]

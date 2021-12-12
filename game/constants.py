@@ -19,15 +19,19 @@ PLAYER_DX = 8
 PLAYER_DY = PLAYER_DX * -1
 
 PLAYER_WIDTH = 10
-PLAYER_HEIGHT = 20
+PLAYER_HEIGHT = 30
 
 PLAYER_SPEED = 10
 
 GRAVITY_SPEED = 3
 
 IMAGE_PLATFORM = os.path.join(os.getcwd(), "./assets/platform.png")
-PLATFORM_HEIGHT = 50
+PLATFORM_HEIGHT = 30
 PLATFORM_WIDTH = 200
+
+IMAGE_PLATFORM_TALL = os.path.join(os.getcwd(), "./assets/platform_tall.png")
+TALL_PLATFORM_HEIGHT = 200
+TALL_PLATFORM_WIDTH = 30  
 
 IMAGE_ENEMY_RED = os.path.join(os.getcwd(), "./assets/enemy_red.png")
 IMAGE_ENEMY_BLUE = os.path.join(os.getcwd(), "./assets/enemy_blue.png")
@@ -41,13 +45,14 @@ IMAGE_COLLISION = os.path.join(os.getcwd(), "./assets/collision.png")
 IMAGE_CRYSTAL_RED = os.path.join(os.getcwd(), "./assets/crystal_red.png")
 IMAGE_CRYSTAL_BLUE = os.path.join(os.getcwd(), "./assets/crystal_blue.png")
 
-CRYSTAL_HEIGHT = 20
-CRYSTAL_WIDTH = 10
+CRYSTAL_HEIGHT = 40
+CRYSTAL_WIDTH = 20
 
 FINISH_HEIGHT = 20
 FINISH_WIDTH = 10
 IMAGE_FINISH = os.path.join(os.getcwd(), "./assets/finish.png")
 
-SOUND_START = ""
-SOUND_OVER = ""
+SOUND_PLATFORM = os.path.join(os.getcwd(), "./batter/assets/platform_hit.wav")
+SOUND_COLOR_CHANGE = os.path.join(os.getcwd(), "./batter/assets/color_change.wav")
 
+IMAGE_WIN = os.path.join(os.getcwd(), "./assets/win.png")
